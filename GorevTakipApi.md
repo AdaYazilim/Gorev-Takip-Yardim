@@ -6,154 +6,149 @@ Sistemimiz, linklere gerekli parametrelerin json yapısında gönderilmesi üzer
 
 Yetkiye bağlı servisleri çağırabilmeniz için login işlemini yapmış olmanız gerekmektdir. Dikkat edilmesi gereken iki nokta vardır. Bir, kullanıcı adı diğer sistemlerle farklılık gösterebilmektedir. İki, şifrenizi “sha256” ile şifreleyerek göndermelisiniz.
 
-<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Link:</span>**</font></font></font> "http://www.gorevtakip.com/Index.Login.iam"
+**Link:** "http://www.gorevtakip.com/Index.Login.iam"
 
-<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Parametreler:</span>**</font></font></font> KullanıcıAdı ve Kullanıcı şifresi (Bu bilgileri acenteden temin edebilirsiniz) .
+**Parametreler:** KullanıcıAdı ve Kullanıcı şifresi (Bu bilgileri acenteden temin edebilirsiniz) .
 
-### <a name="_GoBack"></a>Örnek İstek:
+### Örnek İstek:
 
-<font size="1" style="font-size: 8pt"><font size="1" style="font-size: 8pt">["kullaniciAdi","Sifre"]</font></font>
+["kullaniciAdi","Sifre"]
 
-<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Örnek Cevap:</span>**</font></font></font>
+**Örnek Cevap:**
 
-<font size="1" style="font-size: 8pt"><font size="1" style="font-size: 8pt">{"Basarili":true,"Mesaj":""}</font></font>
+{"Basarili":true,"Mesaj":""}
 
 1.  ## Yeni İş Başlat
 
 Yeni iş başlatmak istediğinizde bu fonksiyonu kullanabilirsiniz. Dikkat edilmesi gereken Elemanların başlatılmak istenen işe göre değişiklik göstereceğidir. Elemanların listesini acentenizden temin edebilirsiniz.
 
-<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Link:</span>**</font></font></font> " http://www.gorevtakip.com/YeniAkis.IsiYarat.iam"
+**Link:** " http://www.gorevtakip.com/YeniAkis.IsiYarat.iam"
 
-<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Parametreler:</span>**</font></font></font> YeniIs Nesnesi
+**Parametreler:** YeniIs Nesnesi
 
-<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Örnek İstek:</span>**</font></font></font> <span style="background: #ffffff"> </span>
+**Örnek İstek:** 
 
-<font size="1" style="font-size: 8pt">{</font>
+{
 
-<font size="1" style="font-size: 8pt">'GenelBilgiler': {</font>
+'GenelBilgiler': {
 
-<font size="1" style="font-size: 8pt">'TanimAd': 'Teklif Ver',</font>
+'TanimAd': 'Teklif Ver',
 
-<font size="1" style="font-size: 8pt">'Baslik': ' '34ABC789 - HALK SİGORTA A.Ş -Trafik',</font>
+'Baslik': ' '34ABC789 - HALK SİGORTA A.Ş -Trafik',
 
-<font size="1" style="font-size: 8pt">'DeadlineTarih': '2015-06-11',</font>
+'DeadlineTarih': '2015-06-11',
 
-<font size="1" style="font-size: 8pt">'DeadlineSaat': '01:47',</font>
+'DeadlineSaat': '01:47',
 
-<font size="1" style="font-size: 8pt">'Oncelik': 7,</font>
+'Oncelik': 7,
 
-<font size="1" style="font-size: 8pt">'Baslatan': 'KullaniciAdi',</font>
+'Baslatan': 'KullaniciAdi',
 
-<font size="1" style="font-size: 8pt">'Elemanlar': [{</font>
+'Elemanlar': [{
 
-<font size="1" style="font-size: 8pt">'KisaAd': 'Sirket',</font>
+'KisaAd': 'Sirket',
 
-<font size="1" style="font-size: 8pt">'Deger': '015',</font>
+'Deger': '015',
 
-<font size="1" style="font-size: 8pt">'UzunDeger': 'HALK SİGORTA A.Ş.'</font>
+'UzunDeger': 'HALK SİGORTA A.Ş.'
 
-<font size="1" style="font-size: 8pt">}</font>
+}
 
-<font size="1" style="font-size: 8pt">]</font>
+]
 
-<font size="1" style="font-size: 8pt">},</font>
+},
 
-<font size="1" style="font-size: 8pt">'IlkFaaliyet': {</font>
+'IlkFaaliyet': {
 
-<font size="1" style="font-size: 8pt">'Tamamlayan': 'KullaniciAdi',</font>
+'Tamamlayan': 'KullaniciAdi',
 
-<font size="1" style="font-size: 8pt">'Elemanlar': [{</font>
+'Elemanlar': [{
 
-<font size="1" style="font-size: 8pt">'KisaAd': 'SirketAd',</font>
+'KisaAd': 'SirketAd',
 
-<font size="1" style="font-size: 8pt">'Deger': 'HALK SİGORTA A.Ş.',</font>
+'Deger': 'HALK SİGORTA A.Ş.',
 
-<font size="1" style="font-size: 8pt">'UzunDeger': 'HALK SİGORTA A.Ş.'</font>
+'UzunDeger': 'HALK SİGORTA A.Ş.'
 
-<font size="1" style="font-size: 8pt">}, {</font>
+}, {
 
-<font size="1" style="font-size: 8pt">'KisaAd': 'Plaka',</font>
+'KisaAd': 'Plaka',
 
-<font size="1" style="font-size: 8pt">'Deger': '34ABC789',</font>
+'Deger': '34ABC789',
 
-<font size="1" style="font-size: 8pt">'UzunDeger': '34ABC789'</font>
+'UzunDeger': '34ABC789'
 
-<font size="1" style="font-size: 8pt">}, {</font>
+}, {
 
-<font size="1" style="font-size: 8pt">'KisaAd': 'KimlikNo',</font>
+'KisaAd': 'KimlikNo',
 
-<font size="1" style="font-size: 8pt">'Deger': '12345678912',</font>
+'Deger': '12345678912',
 
-<font size="1" style="font-size: 8pt">'UzunDeger': '12345678912'</font>
+'UzunDeger': '12345678912'
 
-<font size="1" style="font-size: 8pt">}]</font>
+}]
 
-<font size="1" style="font-size: 8pt">}</font>
+}
 
-<font size="1" style="font-size: 8pt">}</font>
+}
 
 ### Örnek Cevap:
 
 Sonuç başarılı ise dönen mesaj değeri kaydedilen iin ID sini döndürür.
 
-<font size="1" style="font-size: 8pt">{"Basarili":true,"Mesaj":"124563"}</font>
+{"Basarili":true,"Mesaj":"124563"}
 
 1.  ## Veri Yapıları
 
 ### YeniIs
 
-<font size="1" style="font-size: 8pt">{</font>
+{
 
-<font size="1" style="font-size: 8pt">**GenelBilgiler** GenelBilgiler,</font>
+**GenelBilgiler** GenelBilgiler,
 
-<font size="1" style="font-size: 8pt">**Faaliyet** IlkFaaliyet</font>
+**Faaliyet** IlkFaaliyet
 
-<font size="1" style="font-size: 8pt">}</font>
+}
 
 ### GenelBilgiler
 
-<font size="1" style="font-size: 8pt">{</font>
+{
 
-<font size="1" style="font-size: 8pt">**String** TanimAd, (Başlatılacak İşin Tanım Adı (Acenteden Alabilirsiniz.))</font>
+**String** TanimAd, (Başlatılacak İşin Tanım Adı (Acenteden Alabilirsiniz.))
 
-<font size="1" style="font-size: 8pt">**String** Baslik,</font>
+**String** Baslik,
 
-<font size="1" style="font-size: 8pt">**String** DeadlineTarih,</font>
+**String** DeadlineTarih,
 
-<font size="1" style="font-size: 8pt">**String** DeadlineSaat</font>
+**String** DeadlineSaat
 
-<font size="1" style="font-size: 8pt">**İnt** Oncelik,</font>
+**İnt** Oncelik,
 
-<font size="1" style="font-size: 8pt">**String** Baslatan, (Kullanıcı Adı)</font>
+**String** Baslatan, (Kullanıcı Adı)
 
-<font size="1" style="font-size: 8pt">**Eleman[]** Elemanlar</font>
+**Eleman[]** Elemanlar
 
-<font size="1" style="font-size: 8pt">}</font>
+}
 
 ### Faaliyet
 
-<font size="1" style="font-size: 8pt">{</font>
+{
 
-<font size="1" style="font-size: 8pt">**String** Tamamlayan, (Kullanıcı Adı)</font>
+**String** Tamamlayan, (Kullanıcı Adı)
 
-<font size="1" style="font-size: 8pt">**Eleman[]** Elemanlar</font>
+**Eleman[]** Elemanlar
 
-<font size="1" style="font-size: 8pt">}</font>
-
+}
+'''
 ### Eleman
 
-<font size="1" style="font-size: 8pt">{</font>
+{
 
-<font size="1" style="font-size: 8pt">**String** KisaAd,</font>
+**String** KisaAd,
 
-<font size="1" style="font-size: 8pt">**String** Deger,</font>
+**String** Deger,
 
-<font size="1" style="font-size: 8pt">**String** UzunDeger</font>
+**String** UzunDeger
 
-<font size="1" style="font-size: 8pt">}</font>
-
-<div type="FOOTER">
-
-<sdfield type="PAGE" subtype="RANDOM" format="PAGE">5</sdfield> 29.06.2015
-
-</div>
+}
+'''
