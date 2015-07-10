@@ -875,3 +875,13 @@ Bütün acentelerde kullanılmamakta, acenteniz kullanıyorsa acentenizden bilgi
 | Altı Aylık | 2 |
 | Üç Aylık | 3 |
 | Aylık | 4 |
+
+<table>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+  </tr>
+  <tr>
+    <td colspan="2">Three</td>
+  </tr>
+</table>
