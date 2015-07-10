@@ -1,138 +1,159 @@
-# 1.Ada Yazılım Acente Cari WEB API
+# Ada Yazılım Görev Takip WEB API
 
 Sistemimiz, linklere gerekli parametrelerin json yapısında gönderilmesi üzerinde kuruludur. Login gerekli olan işlemler için öncelikle login isteğine başarılı cevap almalısınız, ardından yetki gerektiren işlemi yapabilirsiniz. Dikkat edilmesi gereken konu ise bu işlemlerin aynı sessionda yapılmasıdır.
 
-1. KullanÃÂ±cÃÂ± GiriÃÂi
+1.  ## Kullanıcı Girişi
 
-Login Linki:" [http://localhost/ada/Login.GirisYap.aaw](http://localhost/ada/Login.GirisYap.aaw)"
+Yetkiye bağlı servisleri çağırabilmeniz için login işlemini yapmış olmanız gerekmektdir. Dikkat edilmesi gereken iki nokta vardır. Bir, kullanıcı adı diğer sistemlerle farklılık gösterebilmektedir. İki, şifrenizi “sha256” ile şifreleyerek göndermelisiniz.
 
-Parametreler; KullanıcıAdı ve Kullanıcı şifresi (Bu bilgileri acenteden temin edebilirsiniz.)
+<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Link:</span>**</font></font></font> "http://www.gorevtakip.com/Index.Login.iam"
 
-Örnek İstek:   ["kullaniciAdi","Sifre"]
+<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Parametreler:</span>**</font></font></font> KullanıcıAdı ve Kullanıcı şifresi (Bu bilgileri acenteden temin edebilirsiniz) .
 
-Örnek Cevap:  {"Basarili":true,"Mesaj":""}
+### <a name="_GoBack"></a>Örnek İstek:
 
-1. PoliÃÂ§e Arama
+<font size="1" style="font-size: 8pt"><font size="1" style="font-size: 8pt">["kullaniciAdi","Sifre"]</font></font>
 
-Poliçe Arama Linki: " [http://localhost/ada/Police.PoliceAra.aaw](http://localhost/ada/Police.PoliceAra.aaw)"
+<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Örnek Cevap:</span>**</font></font></font>
 
-Parametreler: Query (Bu bilgi " **PoliceNo/SigortalıAdı/KimlikNo/Plaka/Marka**"  alanları için geçerlidir. yazacağınız query bilgisi bu alanlarla karşılaştırılır ve uygun kayıtlar getirilir.)
+<font size="1" style="font-size: 8pt"><font size="1" style="font-size: 8pt">{"Basarili":true,"Mesaj":""}</font></font>
 
-Örnek İstek:   ["0330011122"]
+1.  ## Yeni İş Başlat
 
-Örnek Cevap:
+Yeni iş başlatmak istediğinizde bu fonksiyonu kullanabilirsiniz. Dikkat edilmesi gereken Elemanların başlatılmak istenen işe göre değişiklik göstereceğidir. Elemanların listesini acentenizden temin edebilirsiniz.
 
-[{
+<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Link:</span>**</font></font></font> " http://www.gorevtakip.com/YeniAkis.IsiYarat.iam"
 
-     "FprkPol":176529, //Cari veritabanında kayıtlı poliçe keyidir.
+<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Parametreler:</span>**</font></font></font> YeniIs Nesnesi
 
-     "Tanzim":"2015-03-24T00:00:00", //Poliçe Tanzim Tarihidir.
+<font color="#222222"><font face="Calibri Light, serif"><font size="3">**<span style="background: #ffffff">Örnek İstek:</span>**</font></font></font> <span style="background: #ffffff"> </span>
 
-     "Baslangic": "2015-03-20T00:00:00", //Poliçe Başlangıç Tarihidir.
+<font size="1" style="font-size: 8pt">{</font>
 
-     "Bitis": "2015-03-20T00:00:00", //Poliçe Bitiş Tarihidir.
+<font size="1" style="font-size: 8pt">'GenelBilgiler': {</font>
 
-     "Brans":"412", // Cari veritabanında Tanımlı Poliçe Brans Kodudur.
+<font size="1" style="font-size: 8pt">'TanimAd': 'Teklif Ver',</font>
 
-     "PolGrp":"NAK", // Poliçe Grubudur.
+<font size="1" style="font-size: 8pt">'Baslik': ' '34ABC789 - HALK SİGORTA A.Ş -Trafik',</font>
 
-     "PoliceNo": "24370032", //Şirket Poliçe Numarasıdır.
+<font size="1" style="font-size: 8pt">'DeadlineTarih': '2015-06-11',</font>
 
-     "TecditNo":"", //Şirket Tecdit Numarasıdır.
+<font size="1" style="font-size: 8pt">'DeadlineSaat': '01:47',</font>
 
-     "ZeyilNo": "1", //Şirket Zeyil Numarasıdır.
+<font size="1" style="font-size: 8pt">'Oncelik': 7,</font>
 
-     "FfrkSir": 26, //Cari veritabanında kayıtlı Şirket Kodudur.
+<font size="1" style="font-size: 8pt">'Baslatan': 'KullaniciAdi',</font>
 
-     "FfrkMus": 73376, //Cari veritabanında kayıtlı Müşteri keyidir.
+<font size="1" style="font-size: 8pt">'Elemanlar': [{</font>
 
-     "Sigortali": "AK-PA TEKSTİL İHRACAT PAZARLAMA A.Ş.",Poliçede Kayıtlı Sigortalı Adıdır.
+<font size="1" style="font-size: 8pt">'KisaAd': 'Sirket',</font>
 
-     "Plaka": "",//Poliçede Kayıtlı Plaka bilgisidir. Bazı Poliçe gruplarında boş gelir.
+<font size="1" style="font-size: 8pt">'Deger': '015',</font>
 
-     "TeklifDurumu": 0,
+<font size="1" style="font-size: 8pt">'UzunDeger': 'HALK SİGORTA A.Ş.'</font>
 
-     "Il": 34,//Poliçenin İl Bilgisi
+<font size="1" style="font-size: 8pt">}</font>
 
-     "Ilce": "GÜMÜŞSUYU",//Poliçenin İlçe Bilgisi
+<font size="1" style="font-size: 8pt">]</font>
 
-     "FyrlkDrm": 2, //Poliçe Yürürlük Durumu
+<font size="1" style="font-size: 8pt">},</font>
 
-     "PolTek": 1,//Poliçe Sınıfı
+<font size="1" style="font-size: 8pt">'IlkFaaliyet': {</font>
 
-     "FfrkTt": 0,//Tecdit Tipi
+<font size="1" style="font-size: 8pt">'Tamamlayan': 'KullaniciAdi',</font>
 
-     "FpolTip": 0, //Poliçe Tipi
+<font size="1" style="font-size: 8pt">'Elemanlar': [{</font>
 
-     "FTcKimNo": "",//Sigortalı TC Kimlik Numarası
+<font size="1" style="font-size: 8pt">'KisaAd': 'SirketAd',</font>
 
-     "FVerKimNo": "0330011122", //Sigortalı VergiNumarası
+<font size="1" style="font-size: 8pt">'Deger': 'HALK SİGORTA A.Ş.',</font>
 
-     "Marka": "",//Poliçede Kayıtlı Araç Marka bilgisidir. Bazı Poliçe gruplarında boş gelir.
+<font size="1" style="font-size: 8pt">'UzunDeger': 'HALK SİGORTA A.Ş.'</font>
 
-     "FfrkMizBlg": 0//ŞubeKodu
+<font size="1" style="font-size: 8pt">}, {</font>
 
-}]
+<font size="1" style="font-size: 8pt">'KisaAd': 'Plaka',</font>
 
-### Bazı alanlar ve Alabildiği Değerler
+<font size="1" style="font-size: 8pt">'Deger': '34ABC789',</font>
 
-#### PolGrp
+<font size="1" style="font-size: 8pt">'UzunDeger': '34ABC789'</font>
 
-| Poliçe Grubu | Kod |
-| --- | --- |
-| Bireysel Emeklilik | BES |
-| Dask | DSK |
-| Hayat | HAY |
-| Kasko | KKO |
-| Kaza | KZA |
-| Mühendislik | MHE |
-| Nakliyet | NAK |
-| Sağlık | SAG |
-| Trafik | TRF |
-| Yangın | YNG |
+<font size="1" style="font-size: 8pt">}, {</font>
 
-#### TeklifDurumu
+<font size="1" style="font-size: 8pt">'KisaAd': 'KimlikNo',</font>
 
-| Teklif Durumu | Kod |
-| --- | --- |
-| Ayarlanmadı | 0 |
-| Teklif Verildi | 1 |
-| Teklif Onaylandı | 2 |
-| Teklif Onaylanmadı | 3 |
-| Poliçe Yapıldı | 4 |
+<font size="1" style="font-size: 8pt">'Deger': '12345678912',</font>
 
-#### FyrlkDrm
+<font size="1" style="font-size: 8pt">'UzunDeger': '12345678912'</font>
 
-| Yürürlük Durumu | Kod |
-| --- | --- |
-| Yürürlükte | 0 ve 1 |
-| Yürürlükte Değil | 2 ve 3 |
+<font size="1" style="font-size: 8pt">}]</font>
 
+<font size="1" style="font-size: 8pt">}</font>
 
+<font size="1" style="font-size: 8pt">}</font>
 
-#### PolTek
+### Örnek Cevap:
 
-| Poliçe Sınıfı | Kod |
-| --- | --- |
-| Ayarlanmadı | 0 |
-| Poliçe | 1 |
-| Teklif | 2 |
-| Potansiyel        | 3 |
+Sonuç başarılı ise dönen mesaj değeri kaydedilen iin ID sini döndürür.
 
+<font size="1" style="font-size: 8pt">{"Basarili":true,"Mesaj":"124563"}</font>
 
+1.  ## Veri Yapıları
 
-#### FfrkTt
+### YeniIs
 
-| Tecdit Tipi | Kod |
-| --- | --- |
-|   |   |
+<font size="1" style="font-size: 8pt">{</font>
 
-Bu alan kullanılmamaktdır.
+<font size="1" style="font-size: 8pt">**GenelBilgiler** GenelBilgiler,</font>
 
-#### FpolTip
+<font size="1" style="font-size: 8pt">**Faaliyet** IlkFaaliyet</font>
 
-| Poliçe Tipi | Kod |
-| --- | --- |
-|   |   |
+<font size="1" style="font-size: 8pt">}</font>
 
-Bütün acentelerde kullanılmamakta, acenteniz kullanıyorsa acentenizden bilgi alabilirsiniz.
+### GenelBilgiler
+
+<font size="1" style="font-size: 8pt">{</font>
+
+<font size="1" style="font-size: 8pt">**String** TanimAd, (Başlatılacak İşin Tanım Adı (Acenteden Alabilirsiniz.))</font>
+
+<font size="1" style="font-size: 8pt">**String** Baslik,</font>
+
+<font size="1" style="font-size: 8pt">**String** DeadlineTarih,</font>
+
+<font size="1" style="font-size: 8pt">**String** DeadlineSaat</font>
+
+<font size="1" style="font-size: 8pt">**İnt** Oncelik,</font>
+
+<font size="1" style="font-size: 8pt">**String** Baslatan, (Kullanıcı Adı)</font>
+
+<font size="1" style="font-size: 8pt">**Eleman[]** Elemanlar</font>
+
+<font size="1" style="font-size: 8pt">}</font>
+
+### Faaliyet
+
+<font size="1" style="font-size: 8pt">{</font>
+
+<font size="1" style="font-size: 8pt">**String** Tamamlayan, (Kullanıcı Adı)</font>
+
+<font size="1" style="font-size: 8pt">**Eleman[]** Elemanlar</font>
+
+<font size="1" style="font-size: 8pt">}</font>
+
+### Eleman
+
+<font size="1" style="font-size: 8pt">{</font>
+
+<font size="1" style="font-size: 8pt">**String** KisaAd,</font>
+
+<font size="1" style="font-size: 8pt">**String** Deger,</font>
+
+<font size="1" style="font-size: 8pt">**String** UzunDeger</font>
+
+<font size="1" style="font-size: 8pt">}</font>
+
+<div type="FOOTER">
+
+<sdfield type="PAGE" subtype="RANDOM" format="PAGE">5</sdfield> 29.06.2015
+
+</div>
