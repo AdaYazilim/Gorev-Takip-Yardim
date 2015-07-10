@@ -653,85 +653,92 @@ Bazı acentelerimiz Cari programda birden fazla veritabanı kullanmaktadır. Far
 
 ##### Poliçe Alanları ve Karşılıkları
 
-| Genel Alanlar |
-| --- |
-| fPrkPol | Adayazılımın verdiği poliçe numarası |
-| fTnzTar | Tanzim tarihi |
-| fBasTar | Başlangıç tarihi |
-| fBitTar | Bitiş tarihi |
-| Brans | Adayazılımın verdiği Branş |
-| PolGrp | Adayazılımın verdiği Poliçe grubu |
-| fSirPolNo | Şirketin Verdiği Poliçe Numarası |
-| Tecdit\_no | Tecdit Numarası |
-| Zeyl\_no | Zeyil Numarası |
-| fFrkSir | Adayazılımın verdiği şirket Kodu |
-| fFrkMus | Müşteri Numrası |
-| fFrkTa | Tali Müşteri Numarası |
-| fFrkSat | Satıcı Müşteri Numarası |
-| fFrkSor | Sorumlu Müşteri Numarası |
-| SigAdi | Şirket Adı |
-| Plaka | Plaka |
-| fTeklifDrm | Teklif Durumu |
-| fYrlkDrm | Yürürlük Durumu |
-| fPolTek | Poliçe Sınıfı |
-| fPolTip | Poliçe Tipi |
-| fVerKimNo | Vergi Numarası |
-| fTCKimNo | TC Kimlik Numarası |
-| fFrkMizBlg | Müşterinin Bölgesi |
-| fBrtPrm | Bürüt Prim |
-| RizIl | Riziko İl |
-| RizIlce | Riziko İlçe |
-| fPolAltGrp | Alt Brans Grubu (örn; KNT) |
+<table>
+<tr><th colspan='2'>Genel Alanlar</th></tr>
+<tr><td>fPrkPol</td><td>Adayazılımın verdiği poliçe numarası</td></tr>
+<tr><td>fTnzTar</td><td>Tanzim tarihi</td></tr>
+<tr><td>fBasTar</td><td>Başlangıç tarihi</td></tr>
+<tr><td>fBitTar</td><td>Bitiş tarihi</td></tr>
+<tr><td>Brans</td><td>Adayazılımın verdiği Branş</td></tr>
+<tr><td>PolGrp</td><td>Adayazılımın verdiği Poliçe grubu</td></tr>
+<tr><td>fSirPolNo</td><td>Şirketin Verdiği Poliçe Numarası</td></tr>
+<tr><td>Tecdit</td><td>| Tecdit Numarası</td></tr>
+<tr><td>Zeyl</td><td>| Zeyil Numarası</td></tr>
+<tr><td>fFrkSir</td><td>Adayazılımın verdiği şirket Kodu</td></tr>
+<tr><td>fFrkMus</td><td>Müşteri Numrası</td></tr>
+<tr><td>fFrkTa</td><td>Tali Müşteri Numarası</td></tr>
+<tr><td>fFrkSat</td><td>Satıcı Müşteri Numarası</td></tr>
+<tr><td>fFrkSor</td><td>Sorumlu Müşteri Numarası</td></tr>
+<tr><td>SigAdi</td><td>Şirket Adı</td></tr>
+<tr><td>Plaka</td><td>Plaka</td></tr>
+<tr><td>fTeklifDrm</td><td>Teklif Durumu</td></tr>
+<tr><td>fYrlkDrm</td><td>Yürürlük Durumu</td></tr>
+<tr><td>fPolTek</td><td>Poliçe Sınıfı</td></tr>
+<tr><td>fPolTip</td><td>Poliçe Tipi</td></tr>
+<tr><td>fVerKimNo</td><td>Vergi Numarası</td></tr>
+<tr><td>fTCKimNo</td><td>TC Kimlik Numarası</td></tr>
+<tr><td>fFrkMizBlg</td><td>Müşterinin Bölgesi</td></tr>
+<tr><td>fBrtPrm</td><td>Bürüt Prim</td></tr>
+<tr><td>RizIl</td><td>Riziko İl</td></tr>
+<tr><td>RizIlce</td><td>Riziko İlçe</td></tr>
+<tr><td>fPolAltGrp</td><td>Alt Brans Grubu (örn; KNT)</td></tr>
+</table>
 
-| Ek Alanlar |
-| --- |
-| feposta | Eposta Adresi |
-| ftelno | Telefon Numarası |
-| SirketAdi | Şirket Adı |
-| fsigdogtar | Sigortalı Doğum Tarihi |
-| fsigetdtar | Sigorta Ettiren Doğum Tarihi |
 
-| Trafik Kasko Ek Alanları |
-| --- |
-| fegmblgno | EgmBelge Numarası/Asbis numarası |
-| fArcKod | Araç Kodu |
-| Marka | Araç Marka |
-| Model | Araç Model |
-| ModYil | Araç Model Yılı |
+<table>
+<tr><th colspan='2'>Ek Alanlar</th></tr>
+<tr><td>feposta</td><td>Eposta Adresi</td></tr>
+<tr><td>ftelno</td><td>Telefon Numarası</td></tr>
+<tr><td>SirketAdi</td><td>Şirket Adı</td></tr>
+<tr><td>fsigdogtar</td><td>Sigortalı Doğum Tarihi</td></tr>
+<tr><td>fsigetdtar</td><td>Sigorta Ettiren Doğum Tarihi</td></tr>
+</table>
 
-| Dask Ek Alanları |
-| --- |
-| fTopKatSay | Toplam Kat Sayısı |
-| fBrtM2 | Bürüt Metre Kare |
-| fInsYil | İnşaat Yılı |
-| fuavtadres | UAVT adres Kodu |
-| fRizDaire | Riziko Adresi |
-| fDskPolNo | Dask Poliçe Numarası |
+<table>
+<tr><th colspan='2'>Trafik Kasko Ek Alanları</th></tr>
+<tr><td>fegmblgno</td><td>EgmBelge Numarası/Asbis numarası</td></tr>
+<tr><td>fArcKod</td><td>Araç Kodu</td></tr>
+<tr><td>Marka</td><td>Araç Marka</td></tr>
+<tr><td>Model</td><td>Araç Model</td></tr>
+<tr><td>ModYil</td><td>Araç Model Yılı</td></tr>
+</table>
 
-| Bes Ek Alanları |
-| --- |
-| fTaksitTut | Taksit Tutarı |
-| fFonTutar | Fon Tutarı |
-| fEkKatPay | Aylık Katkı Payı |
-| fBasKatPay | Başlangıç Katkı Payı |
-| fDevAidat | Devreden Katkı Payı |
-| fYilPrm | Yıllık Prim |
-| fBesOdeSek | Ödeme Şekli |
-| fTakBnkSic | Takas Bank Sicil Numarası |
-| fSozFonTut | Fon Dağılımı |
+<table>
+<tr><th colspan='2'>Dask Ek Alanları</th></tr>
+<tr><td>fTopKatSay</td><td>Toplam Kat Sayısı</td></tr>
+<tr><td>fBrtM2</td><td>Bürüt Metre Kare</td></tr>
+<tr><td>fInsYil</td><td>İnşaat Yılı</td></tr>
+<tr><td>fuavtadres</td><td>UAVT adres Kodu</td></tr>
+<tr><td>fRizDaire</td><td>Riziko Adresi</td></tr>
+<tr><td>fDskPolNo</td><td>Dask Poliçe Numarası</td></tr>
+</table>
+
+<table>
+<tr><th colspan='2'>Bes Ek Alanları</th></tr>
+<tr><td>fTaksitTut</td><td>Taksit Tutarı</td></tr>
+<tr><td>fFonTutar</td><td>Fon Tutarı</td></tr>
+<tr><td>fEkKatPay</td><td>Aylık Katkı Payı</td></tr>
+<tr><td>fBasKatPay</td><td>Başlangıç Katkı Payı</td></tr>
+<tr><td>fDevAidat</td><td>Devreden Katkı Payı</td></tr>
+<tr><td>fYilPrm</td><td>Yıllık Prim</td></tr>
+<tr><td>fBesOdeSek</td><td>Ödeme Şekli</td></tr>
+<tr><td>fTakBnkSic</td><td>Takas Bank Sicil Numarası</td></tr>
+<tr><td>fSozFonTut</td><td>Fon Dağılımı</td></tr>
+</table>
 
 ##### Müşteri Alanları ve Karşılıkları
 
-| Genel Alanlar |
-| --- |
-| fPrkMus | Müşteri Numarası |
-| fMusAdi | Adı |
-| fMusSoyadi | Soyadı |
-| fMusTip | Müşeri Tip |
-| fKulHesKod |   |
+<table>
+<tr><th colspan='2'>Genel Alanlar</th></tr>
+<tr><td>fPrkMus</td><td>Müşteri Numarası</td></tr>
+<tr><td>fMusAdi</td><td>Adı</td></tr>
+<tr><td>fMusSoyadi</td><td>Soyadı</td></tr>
+<tr><td>fMusTip</td><td>Müşeri Tip</td></tr>
+<tr><td>fKulHesKod</td><td> </td></tr>
+</table>
 
 <table>
-<tr><td colspan='2'>Ek Alanlar</td></tr>
+<tr><th colspan='2'>Ek Alanlar</th></tr>
 <tr><td>fmuskod</td><td>Müşteri Kodu</td></tr>
 <tr><td>fMusUnv</td><td>Ünvanı</td></tr>
 <tr><td>fMusKimNo</td><td>VergiNumarası</td></tr>
