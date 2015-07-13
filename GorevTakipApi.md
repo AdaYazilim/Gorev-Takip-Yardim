@@ -2,7 +2,7 @@
 
 Sistemimiz, linklere gerekli parametrelerin json yapısında gönderilmesi üzerinde kuruludur. Login gerekli olan işlemler için öncelikle login isteğine başarılı cevap almalısınız, ardından yetki gerektiren işlemi yapabilirsiniz. Dikkat edilmesi gereken konu ise bu işlemlerin aynı sessionda yapılmasıdır.
 
-1.  ## Kullanıcı Girişi
+### 1.Kullanıcı Girişi
 
 Yetkiye bağlı servisleri çağırabilmeniz için login işlemini yapmış olmanız gerekmektdir. Dikkat edilmesi gereken iki nokta vardır. Bir, kullanıcı adı diğer sistemlerle farklılık gösterebilmektedir. İki, şifrenizi “sha256” ile şifreleyerek göndermelisiniz.
 
@@ -10,15 +10,15 @@ Yetkiye bağlı servisleri çağırabilmeniz için login işlemini yapmış olma
 
 **Parametreler:** KullanıcıAdı ve Kullanıcı şifresi (Bu bilgileri acenteden temin edebilirsiniz) .
 
-### Örnek İstek:
+#####Örnek İstek:
 
 ["kullaniciAdi","Sifre"]
 
-**Örnek Cevap:**
+#####Örnek Cevap:
 
 {"Basarili":true,"Mesaj":""}
 
-1.  ## Yeni İş Başlat
+### 1.Yeni İş Başlat
 
 Yeni iş başlatmak istediğinizde bu fonksiyonu kullanabilirsiniz. Dikkat edilmesi gereken Elemanların başlatılmak istenen işe göre değişiklik göstereceğidir. Elemanların listesini acentenizden temin edebilirsiniz.
 
@@ -26,7 +26,7 @@ Yeni iş başlatmak istediğinizde bu fonksiyonu kullanabilirsiniz. Dikkat edilm
 
 **Parametreler:** YeniIs Nesnesi
 
-**Örnek İstek:** 
+#####Örnek İstek:
 
 {
 
@@ -92,15 +92,15 @@ Yeni iş başlatmak istediğinizde bu fonksiyonu kullanabilirsiniz. Dikkat edilm
 
 }
 
-### Örnek Cevap:
+#####Örnek Cevap:
 
 Sonuç başarılı ise dönen mesaj değeri kaydedilen iin ID sini döndürür.
 
 {"Basarili":true,"Mesaj":"124563"}
 
-1.  ## Veri Yapıları
+###1.Veri Yapıları
 
-### YeniIs
+##### YeniIs
 
 {
 
@@ -110,7 +110,7 @@ Sonuç başarılı ise dönen mesaj değeri kaydedilen iin ID sini döndürür.
 
 }
 
-### GenelBilgiler
+##### GenelBilgiler
 
 {
 
@@ -130,7 +130,7 @@ Sonuç başarılı ise dönen mesaj değeri kaydedilen iin ID sini döndürür.
 
 }
 
-### Faaliyet
+##### Faaliyet
 
 {
 
@@ -139,8 +139,8 @@ Sonuç başarılı ise dönen mesaj değeri kaydedilen iin ID sini döndürür.
 **Eleman[]** Elemanlar
 
 }
-'''
-### Eleman
+
+##### Eleman
 
 {
 
@@ -151,4 +151,3 @@ Sonuç başarılı ise dönen mesaj değeri kaydedilen iin ID sini döndürür.
 **String** UzunDeger
 
 }
-'''
