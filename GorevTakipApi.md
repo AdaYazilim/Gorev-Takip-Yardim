@@ -18,7 +18,7 @@ Yetkiye bağlı servisleri çağırabilmeniz için login işlemini yapmış olma
 
 {"Basarili":true,"Mesaj":""}
 
-### 1.Yeni İş Başlat
+### 2.Yeni İş Başlat
 
 Yeni iş başlatmak istediğinizde bu fonksiyonu kullanabilirsiniz. Dikkat edilmesi gereken Elemanların başlatılmak istenen işe göre değişiklik göstereceğidir. Elemanların listesini acentenizden temin edebilirsiniz.
 
@@ -98,7 +98,7 @@ Sonuç başarılı ise dönen mesaj değeri kaydedilen iin ID sini döndürür.
 
 {"Basarili":true,"Mesaj":"124563"}
 
-###1.Veri Yapıları
+###3.Veri Yapıları
 
 ##### YeniIs
 
