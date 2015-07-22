@@ -102,7 +102,10 @@ Her bir eleman için; "KisaAd", "Deger", "UzunDeger" alanlarının yanısıra "S
 {
     "GenelDegiskenler": [
         {
-            "KisaAd": "sigorta_ettiren_tc",
+            "Aciklama": "Poliçe Numarası",
+            "Tip": "Sayi",
+            "Zorunlu": false,
+            "KisaAd": "polno",
             "Deger": "",
             "UzunDeger": "",
             "Secenekler": []
@@ -110,32 +113,32 @@ Her bir eleman için; "KisaAd", "Deger", "UzunDeger" alanlarının yanısıra "S
     ],
     "IlkFaaliyetDegiskenler": [
         {
-            "KisaAd": "brans",
+            "Aciklama": "Teknik Sorumlu",
+            "Tip": "Liste",
+            "Zorunlu": false,
+            "KisaAd": "tekniksorumlu",
             "Deger": "",
             "UzunDeger": "",
             "Secenekler": [
                 {
-                    "Metin": "KASKO",
-                    "Deger": "ksk"
+                    "Metin": "Görev Yoneticisi",
+                    "Deger": "1"
                 },
                 {
-                    "Metin": "TRAFİK",
-                    "Deger": "trf"
+                    "Metin": "Veli Ali",
+                    "Deger": "2"
                 },
                 {
-                    "Metin": "DASK",
-                    "Deger": "dsk"
+                    "Metin": "Ali Veli",
+                    "Deger": "3"
                 }
             ]
         },
         {
-            "KisaAd": "sig_ettiren_tc",
-            "Deger": "",
-            "UzunDeger": "",
-            "Secenekler": []
-        },
-        {
-            "KisaAd": "sig_ettiren_vrg",
+            "Aciklama": "Poliçe Numarası",
+            "Tip": "Sayi",
+            "Zorunlu": false,
+            "KisaAd": "polno",
             "Deger": "",
             "UzunDeger": "",
             "Secenekler": []
