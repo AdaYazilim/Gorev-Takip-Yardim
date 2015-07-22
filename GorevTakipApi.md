@@ -12,16 +12,24 @@ Yetkiye bağlı servisleri çağırabilmeniz için login işlemini yapmış olma
 **Parametreler:** KullanıcıAdı ve Kullanıcı şifresi (Bu bilgileri acenteden temin edebilirsiniz) .
 
 <h5>Örnek İstek:</h5>
-
-["kullaniciAdi","Sifre"]
+<pre>
+["kullaniciAdi", "Sifre"]
+</pre>
 
 <h5>Örnek Cevap:</h5>
 
-{"Basarili":true,"Mesaj":""}
+<pre>
+{
+    "Basarili": true,
+    "Mesaj": ""
+}
+</pre>
 
 <h3>2.Yeni İş Başlat</h3>
 
-Yeni iş başlatmak istediğinizde bu fonksiyonu kullanabilirsiniz. Dikkat edilmesi gereken Elemanların başlatılmak istenen işe göre değişiklik göstereceğidir. Elemanların listesini acentenizden temin edebilirsiniz.
+Yeni iş başlatmak istediğinizde bu fonksiyonu kullanabilirsiniz. Dikkat edilmesi gereken Elemanların başlatılmak istenen işe göre değişiklik göstereceğidir.  Elemanların listesini "Yeni İş Başlat Yardım" servisinden edebilirsiniz.
+
+Göndereceğiniz her eleman için; "KisaAd" ve "Deger" zorunlu alanlardır. "UzunDeger" alanı eleman değeri için açıklayıcı nitelik taşıyan veridir. Özellikle Seçenekli Elemanlarda seçeneğin "Metin" kısmını gönderilebilirsiniz. Diğer zamanlarda "UzunDeger ve "Deger" bilgilerini aynı olarak gönderebilirsiniz.
 
 **Link:** " http://www.gorevtakip.com/YeniAkis.IsiYarat.iam"
 
@@ -29,126 +37,150 @@ Yeni iş başlatmak istediğinizde bu fonksiyonu kullanabilirsiniz. Dikkat edilm
 
 <h5>Örnek İstek:</h5>
 
+<pre>
 {
-
-'GenelBilgiler': {
-
-'TanimAd': 'Teklif Ver',
-
-'Baslik': ' '34ABC789 - HALK SİGORTA A.Ş -Trafik',
-
-'DeadlineTarih': '2015-06-11',
-
-'DeadlineSaat': '01:47',
-
-'Oncelik': 7,
-
-'Baslatan': 'KullaniciAdi',
-
-'Elemanlar': [{
-
-'KisaAd': 'Sirket',
-
-'Deger': '015',
-
-'UzunDeger': 'HALK SİGORTA A.Ş.'
-
+    'GenelBilgiler': {
+        'TanimAd': 'Teklif Ver',
+        'Baslik': ' '34ABC789 - HALK SİGORTA A.Ş -Trafik',
+        'DeadlineTarih': '2015-06-11',
+        'DeadlineSaat': '01:47',
+        'Oncelik': 7,
+        'Baslatan': 'KullaniciAdi',
+        'Elemanlar': [{
+            'KisaAd': 'Sirket',
+            'Deger': '015',
+            'UzunDeger': 'HALK SİGORTA A.Ş.'
+        }]
+    },
+    'IlkFaaliyet': {
+        'Tamamlayan': 'KullaniciAdi',
+        'Elemanlar': [{
+            'KisaAd': 'SirketAd',
+            'Deger': 'HALK SİGORTA A.Ş.',
+            'UzunDeger': 'HALK SİGORTA A.Ş.'
+        }, {
+            'KisaAd': 'Plaka',
+            'Deger': '34ABC789',
+            'UzunDeger': '34ABC789'
+        }, {
+            'KisaAd': 'KimlikNo',
+            'Deger': '12345678912',
+            'UzunDeger': '12345678912'
+        }]
+    }
 }
-
-]
-
-},
-
-'IlkFaaliyet': {
-
-'Tamamlayan': 'KullaniciAdi',
-
-'Elemanlar': [{
-
-'KisaAd': 'SirketAd',
-
-'Deger': 'HALK SİGORTA A.Ş.',
-
-'UzunDeger': 'HALK SİGORTA A.Ş.'
-
-}, {
-
-'KisaAd': 'Plaka',
-
-'Deger': '34ABC789',
-
-'UzunDeger': '34ABC789'
-
-}, {
-
-'KisaAd': 'KimlikNo',
-
-'Deger': '12345678912',
-
-'UzunDeger': '12345678912'
-
-}]
-
-}
-
-}
+</pre>
 
 <h5>Örnek Cevap:</h5>
 
 Sonuç başarılı ise dönen mesaj değeri kaydedilen iin ID sini döndürür.
 
-{"Basarili":true,"Mesaj":"124563"}
+<pre>
+{
+    "Basarili": true,
+    "Mesaj": "124563"
+}
+</pre>
 
+<h3>3.Yeni İş Başlat Yardım</h3>
+
+İş Akış Tanımının Genel ve ilk Faaliyet alanlarında tanımlı ve faaliyete göre değişen eleman lsitesini almak için kullanılabilirsiniz.
+
+Her bir eleman için; "KisaAd", "Deger", "UzunDeger" alanlarının yanısıra "Secenekler" alanıda gelir. Bu alanda bulunan liste Elemanın alabileceği değerleri göstermektedir. Liste yoksa veya boş ise Herhangi bir değer gönderilebilinir.
+
+**Link:** " http://www.gorevtakip.com/YeniAkis.IsiYaratYardim.iam"
+
+**Parametreler:** İş Akışının Tanım adı(acentenizden temin edebilirsiniz.)
+
+<h5>Örnek İstek:</h5>
+<pre>
+["Akis Adi"]
+</pre>
+
+<h5>Örnek Cevap:</h5>
+<pre>
+{
+    "GenelDegiskenler": [
+        {
+            "KisaAd": "sigorta_ettiren_tc",
+            "Deger": "",
+            "UzunDeger": "",
+            "Secenekler": []
+        }
+    ],
+    "IlkFaaliyetDegiskenler": [
+        {
+            "KisaAd": "brans",
+            "Deger": "",
+            "UzunDeger": "",
+            "Secenekler": [
+                {
+                    "Metin": "KASKO",
+                    "Deger": "ksk"
+                },
+                {
+                    "Metin": "TRAFİK",
+                    "Deger": "trf"
+                },
+                {
+                    "Metin": "DASK",
+                    "Deger": "dsk"
+                }
+            ]
+        },
+        {
+            "KisaAd": "sig_ettiren_tc",
+            "Deger": "",
+            "UzunDeger": "",
+            "Secenekler": []
+        },
+        {
+            "KisaAd": "sig_ettiren_vrg",
+            "Deger": "",
+            "UzunDeger": "",
+            "Secenekler": []
+        }
+    ]
+}
+</pre>
 <h1>Veri Yapıları</h1>
 
 <h5>YeniIs</h5>
-
+<pre>
 {
-
-<strong>GenelBilgiler</strong> GenelBilgiler,
-
-<strong>Faaliyet</strong> IlkFaaliyet
-
+    <strong>GenelBilgiler</strong> GenelBilgiler,
+    <strong>Faaliyet</strong> IlkFaaliyet
 }
-
+</pre>
 <h5>GenelBilgiler</h5>
 
+<pre>
 {
-
-<strong>String</strong> TanimAd, (Başlatılacak İşin Tanım Adı (Acenteden Alabilirsiniz.))
-
-<strong>String</strong> Baslik,
-
-<strong>String</strong> DeadlineTarih,
-
-<strong>String</strong> DeadlineSaat
-
-<strong>int</strong> Oncelik,
-
-<strong>String</strong> Baslatan, (Kullanıcı Adı)
-
-<strong>Eleman[]</strong> Elemanlar
-
+    <strong>String</strong> TanimAd, (Başlatılacak İşin Tanım Adı (Acenteden Alabilirsiniz.))
+    <strong>String</strong> Baslik,
+    <strong>String</strong> DeadlineTarih,
+    <strong>String</strong> DeadlineSaat
+    <strong>int</strong> Oncelik,
+    <strong>String</strong> Baslatan, (Kullanıcı Adı)
+    <strong>Eleman[]</strong> Elemanlar
 }
+</pre>
+
 
 <h5>Faaliyet</h5>
 
+<pre>
 {
-
-<strong>String</strong> Tamamlayan, (Kullanıcı Adı)
-
-<strong>Eleman[]</strong> Elemanlar
-
+    <strong>String</strong> Tamamlayan, (Kullanıcı Adı)
+    <strong>Eleman[]</strong> Elemanlar
 }
+</pre>
 
 <h5>Eleman</h5>
-
+<pre>
 {
-
-<strong>String</strong> KisaAd,
-
-<strong>String</strong> Deger,
-
-<strong>String</strong> UzunDeger
-
+    <strong>String</strong> KisaAd,
+    <strong>String</strong> Deger,
+    <strong>String</strong> UzunDeger
 }
+</pre>
