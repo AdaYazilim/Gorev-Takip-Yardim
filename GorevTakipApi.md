@@ -30,36 +30,67 @@ Yeni iş başlatmak istediğinizde bu fonksiyonu kullanabilirsiniz. Dikkat edilm
 <h5>Örnek İstek:</h5>
 
 {
+
 'GenelBilgiler': {
+
 'TanimAd': 'Teklif Ver',
+
 'Baslik': ' '34ABC789 - HALK SİGORTA A.Ş -Trafik',
+
 'DeadlineTarih': '2015-06-11',
+
 'DeadlineSaat': '01:47',
+
 'Oncelik': 7,
+
 'Baslatan': 'KullaniciAdi',
+
 'Elemanlar': [{
+
 'KisaAd': 'Sirket',
+
 'Deger': '015',
+
 'UzunDeger': 'HALK SİGORTA A.Ş.'
+
 }
+
 ]
+
 },
+
 'IlkFaaliyet': {
+
 'Tamamlayan': 'KullaniciAdi',
+
 'Elemanlar': [{
+
 'KisaAd': 'SirketAd',
+
 'Deger': 'HALK SİGORTA A.Ş.',
+
 'UzunDeger': 'HALK SİGORTA A.Ş.'
+
 }, {
+
 'KisaAd': 'Plaka',
+
 'Deger': '34ABC789',
+
 'UzunDeger': '34ABC789'
+
 }, {
+
 'KisaAd': 'KimlikNo',
+
 'Deger': '12345678912',
+
 'UzunDeger': '12345678912'
+
 }]
+
 }
+
 }
 
 <h5>Örnek Cevap:</h5>
@@ -73,33 +104,51 @@ Sonuç başarılı ise dönen mesaj değeri kaydedilen iin ID sini döndürür.
 <h5>YeniIs</h5>
 
 {
+
 <strong>GenelBilgiler</strong> GenelBilgiler,
+
 <strong>Faaliyet</strong> IlkFaaliyet
+
 }
 
 <h5>GenelBilgiler</h5>
 
 {
+
 <strong>String</strong> TanimAd, (Başlatılacak İşin Tanım Adı (Acenteden Alabilirsiniz.))
+
 <strong>String</strong> Baslik,
+
 <strong>String</strong> DeadlineTarih,
+
 <strong>String</strong> DeadlineSaat
+
 <strong>int</strong> Oncelik,
+
 <strong>String</strong> Baslatan, (Kullanıcı Adı)
+
 <strong>Eleman[]</strong> Elemanlar
+
 }
 
 <h5>Faaliyet</h5>
 
 {
+
 <strong>String</strong> Tamamlayan, (Kullanıcı Adı)
+
 <strong>Eleman[]</strong> Elemanlar
+
 }
 
 <h5>Eleman</h5>
 
 {
+
 <strong>String</strong> KisaAd,
+
 <strong>String</strong> Deger,
+
 <strong>String</strong> UzunDeger
+
 }
