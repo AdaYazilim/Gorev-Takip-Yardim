@@ -151,21 +151,21 @@ Her bir eleman için; "KisaAd", "Deger", "UzunDeger" alanlarının yanısıra "S
 <h5>YeniIs</h5>
 <pre>
 {
-    <strong>GenelBilgiler</strong> GenelBilgiler,
-    <strong>Faaliyet</strong> IlkFaaliyet
+    <strong>GenelBilgiler</strong> GenelBilgiler,     (Başlatılacak işin genel bilgileri)
+    <strong>Faaliyet</strong> IlkFaaliyet             (Başlatılacak işin ilk faaliyeti)
 }
 </pre>
 <h5>GenelBilgiler</h5>
 
 <pre>
 {
-    <strong>String</strong> TanimAd, (Başlatılacak İşin Tanım Adı (Acenteden Alabilirsiniz.))
-    <strong>String</strong> Baslik,
-    <strong>String</strong> DeadlineTarih,
-    <strong>String</strong> DeadlineSaat
-    <strong>int</strong> Oncelik,
-    <strong>String</strong> Baslatan, (Kullanıcı Adı)
-    <strong>Eleman[]</strong> Elemanlar
+    <strong>String</strong> TanimAd,         (Başlatılacak İşin Tanım Adı (Acenteden Alabilirsiniz.))
+    <strong>String</strong> Baslik,          (Görevin başlığı)
+    <strong>String</strong> DeadlineTarih,   (Görevin en son bitmesi öngörülen tarih.)
+    <strong>String</strong> DeadlineSaat     (Görevin en son bitmesi öngörülen saat.)
+    <strong>int</strong> Oncelik,            (Görevin önemini belirten 1(düşük)-10(yüksek) arasında derecelendirme.)
+    <strong>String</strong> Baslatan,        (Kullanıcı Adı)
+    <strong>Eleman[]</strong> Elemanlar      (Görevin her faaliyette değeri değiştirilebilinen elemanları)
 }
 </pre>
 
@@ -174,16 +174,16 @@ Her bir eleman için; "KisaAd", "Deger", "UzunDeger" alanlarının yanısıra "S
 
 <pre>
 {
-    <strong>String</strong> Tamamlayan, (Kullanıcı Adı)
-    <strong>Eleman[]</strong> Elemanlar
+    <strong>String</strong> Tamamlayan,      (Kullanıcı Adı)
+    <strong>Eleman[]</strong> Elemanlar      (Faaliyette bulunan elemanlar)
 }
 </pre>
 
 <h5>Eleman</h5>
 <pre>
 {
-    <strong>String</strong> KisaAd,
-    <strong>String</strong> Deger,
-    <strong>String</strong> UzunDeger
+    <strong>String</strong> KisaAd,         (Elemanı diğer elemanlardan ayıran anahtar kelime)
+    <strong>String</strong> Deger,          (Elemana verilen değer)
+    <strong>String</strong> UzunDeger       (Elemanın açıklamalı değeri)
 }
 </pre>
