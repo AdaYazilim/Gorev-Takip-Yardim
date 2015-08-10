@@ -41,7 +41,7 @@ Göndereceğiniz her eleman için; "KisaAd" ve "Deger" zorunlu alanlardır. "Uzu
 {
     'GenelBilgiler': {
         'TanimAd': 'Teklif Ver',
-        'Baslik': ' '34ABC789 - HALK SİGORTA A.Ş -Trafik',
+        'Baslik': '34ABC789 - HALK SİGORTA A.Ş -Trafik',
         'DeadlineTarih': '2015-06-11',
         'DeadlineSaat': '01:47',
         'Oncelik': 7,
