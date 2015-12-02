@@ -166,6 +166,8 @@ Her bir eleman için; "KisaAd", "Deger", "UzunDeger" alanlarının yanısıra "S
     <strong>int</strong> Oncelik,            (Görevin önemini belirten 1(düşük)-10(yüksek) arasında derecelendirme.)
     <strong>String</strong> Baslatan,        (Kullanıcı Adı)
     <strong>Eleman[]</strong> Elemanlar      (Görevin her faaliyette değeri değiştirilebilinen elemanları)
+    <strong>Bool</strong> Ertelenmis,   (Görevin ileri tarihte sorumlulara atılacağını gösterir)
+    <strong>String</strong> ErtelemeBitisTarihi,   (Görevin sorumlulara iş olarak düşeceği tarih.)
 }
 </pre>
 
