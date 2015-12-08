@@ -146,6 +146,36 @@ Her bir eleman için; "KisaAd", "Deger", "UzunDeger" alanlarının yanısıra "S
     ]
 }
 </pre>
+
+
+<h3>4.İşi Sonlandır</h3>
+
+Mevcut işi Herhangi Bir faaliyette sonlandırmak için kullanılır. "İş Akışı Sonlandırabilir" rolü Gerektirir.
+
+**Link:** "http://www.gorevtakip.com/Gorev.IsSonlandir.iam"
+
+**Parametreler:** İş Akışı instance Id
+
+<h5>Örnek İstek:</h5>
+
+<pre>
+[123456789]
+</pre>
+
+<h5>Örnek Cevap:</h5>
+
+Dönen cevaptaki Basarili ve Mesaj alanları işlemin nasıl tamamlandığını ve olası açıklamaları döndürür.
+
+<pre>
+{
+    "KullaniciYonetimYapabilir": ...,
+    "Is": {...},
+    "Basarili": true,
+    "Mesaj": ""
+}
+</pre>
+
+
 <h1>Veri Yapıları</h1>
 
 <h5>YeniIs</h5>
