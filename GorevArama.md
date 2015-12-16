@@ -181,7 +181,7 @@ Aramalarda kullanabileceğiniz Anahtar Kelimelere ve gerekli yerlerde kullanabil
 <h3>GorevleriAlInput</h3>
 <pre>
 {
-	<strong>String</strong> Query,     (Arama Sorgusu)
+    <strong>String</strong> Query,     (Arama Sorgusu)
     <strong>String</strong> KayitNo    (Kayıtlı Sorgu Id)
 }
 </pre>
@@ -189,8 +189,8 @@ Aramalarda kullanabileceğiniz Anahtar Kelimelere ve gerekli yerlerde kullanabil
 <h3>BasitIsAkisiListesi</h3>
 <pre>
 {
-	<strong>List<Pano></strong> Panolar,     (İş Panoları)
-	<strong>Bool</strong> Basarili,     (Sorgu Başarıyla Tamamlandı mı)
+    <strong>Pano[]</strong> Panolar,     (İş Panoları)
+    <strong>Bool</strong> Basarili,     (Sorgu Başarıyla Tamamlandı mı)
     <strong>String</strong> Mesaj    (Olası Bilgi Mesajı)
 }
 </pre>
@@ -200,7 +200,7 @@ Aramalarda kullanabileceğiniz Anahtar Kelimelere ve gerekli yerlerde kullanabil
 {
     <strong>Int</strong> Id,     (Pano Id)
     <strong>String</strong> Ad,     (Pano Adı)
-    <strong>List<AramaSonucuIsAkisiInstance></strong> Isler    (İşler)
+    <strong>AramaSonucuIsAkisiInstance[]</strong> Isler    (İşler)
     <strong>bool</strong> DigerIslerPanosu,    (İş default Panoda ise true dur)
     ...
 }
@@ -209,7 +209,7 @@ Aramalarda kullanabileceğiniz Anahtar Kelimelere ve gerekli yerlerde kullanabil
 <h3>AramaSonucuIsAkisiInstance</h3>
 <pre>
 {
-	<strong>int</strong> IsAkisiInstanceId, (iş Id)
+    <strong>int</strong> IsAkisiInstanceId, (iş Id)
     <strong>string</strong> Baslik,   
     <strong>string</strong> Aciklama,
     <strong>DateTime</strong> Deadline,
@@ -220,11 +220,11 @@ Aramalarda kullanabileceğiniz Anahtar Kelimelere ve gerekli yerlerde kullanabil
     <strong>bool</strong> Ertelenmis, (Durum == IsDurum.Ertelendi)
     <strong>bool</strong> Aktif,      (Durum == IsDurum.Aktif)
     <strong>int</strong> OlusturanId,
-    <strong>List<AktifFaaliyet> AktifFaaliyetler,
-    <strong>List<TamamlanmisFaaliyet> TamamlanmisFaaliyetler,
+    <strong>AktifFaaliyet[]</strong> AktifFaaliyetler,
+    <strong>TamamlanmisFaaliyet[]</strong> TamamlanmisFaaliyetler,
     <strong>int</strong> Oncelik,
-    <strong>List<int></strong> OkuyanKullaniciIdler,
-    <strong>List<int></strong> GizleyenKullaniciIdler,
+    <strong>int[]</strong> OkuyanKullaniciIdler,
+    <strong>int[]</strong> GizleyenKullaniciIdler,
     <strong>bool</strong> Acil,
     <strong>int</strong> AcilSiraNo,
     <strong>string</strong> IsKisaAd,
@@ -265,8 +265,8 @@ Aramalarda kullanabileceğiniz Anahtar Kelimelere ve gerekli yerlerde kullanabil
     <string>string</strong> Ad,                    (Normalize edilmiş ad)
     <string>string</strong> AcikAd,                (Ad)
     <string>int</strong> FaaliyetInstanceId,
-    <string>List<string></strong> Sorumlular,      (Normalize edilmiş sorumlu kullanıcı adları)
-    <string>List<string></strong> AcikSorumlular,  (Sorumlu kullanıcı adları)
+    <string>string[]</strong> Sorumlular,      (Normalize edilmiş sorumlu kullanıcı adları)
+    <string>string[]</strong> AcikSorumlular,  (Sorumlu kullanıcı adları)
     <string>bool</strong> KullaniciUstlenebilir
 }
 </pre>
@@ -277,8 +277,8 @@ Aramalarda kullanabileceğiniz Anahtar Kelimelere ve gerekli yerlerde kullanabil
     <string>string</strong> Ad,
     <string>string</strong> AcikAd,
     <string>int</strong> FaaliyetInstanceId,
-    <string>List<string></strong> Sorumlular,
-    <string>List<string></strong> AcikSorumlular,
+    <string>string[]</strong> Sorumlular,
+    <string>string[]</strong> AcikSorumlular,
     <string>bool</strong> KullaniciUstlenebilir,
     <string>DateTime</strong> TamamlanmaTarihi,
     <string>int</strong> Tamamlayan                 (Tamamlayan KullanıcıId)
@@ -288,19 +288,19 @@ Aramalarda kullanabileceğiniz Anahtar Kelimelere ve gerekli yerlerde kullanabil
 <h3>IntellisenseListeleri</h3>
 <pre>
 {
-    <string>List<AnahtarKelimeOzellik></strong> AnahtarKelimeler,
-    <string>List<string></strong> Kullanicilar,
-    <string>List<string></strong> Isler,
-    <string>List<string></strong> Durumlar,
-    <string>List<string></strong> Tarihler,
+    <string>AnahtarKelimeOzellik[]</strong> AnahtarKelimeler,
+    <string>string[]</strong> Kullanicilar,
+    <string>string[]</strong> Isler,
+    <string>string[]</strong> Durumlar,
+    <string>string[]</strong> Tarihler,
 }
 </pre>
 
 <h3>AnahtarKelimeOzellik</h3>
 <pre>
 {
-    <string>List<string></strong> IfadeListesi,     (Anahtar Kelimenin desteklenen şekilleri)
+    <string>string[]</strong> IfadeListesi,     (Anahtar Kelimenin desteklenen şekilleri)
     <string>string</strong> Aciklama,               
-    <string>List<string></strong> OrnekKullanimlar  
+    <string>string[]</strong> OrnekKullanimlar  
 }
 </pre>
