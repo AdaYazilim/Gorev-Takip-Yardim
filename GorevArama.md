@@ -177,7 +177,7 @@ Aramalarda kullanabileceğiniz Anahtar Kelimelere ve gerekli yerlerde kullanabil
 </pre>
 
 
-<h5>Veri Yapıları</h5>
+<h2>Veri Yapıları</h2>
 <h3>GorevleriAlInput</h3>
 <pre>
 {
